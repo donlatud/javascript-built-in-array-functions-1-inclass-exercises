@@ -9,6 +9,11 @@
 */
 
 // Start coding here
+const addBonusForSelectedDepartment = (employeeInfo, bonus, department) => {
+  return employeeInfo
+    .filter((emp) => emp.department === department)
+    .reduce((total, emp) => total + emp.salary + bonus, 0);
+};
 
 const employeeInfo = [
   {
